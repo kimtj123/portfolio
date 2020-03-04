@@ -1,0 +1,61 @@
+.project{
+    height: 120vh;
+    display: flex;
+    width: 100%;  
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.project-title{
+    background: white;
+    // border-bottom: 1px solid #bcbcbc;
+    display: table;
+    width: 25%;
+    height: 100%;
+
+    p {
+        color: #455c82;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        margin : 0;
+        font-size: 2.5rem;
+        font-weight: bold;    
+    }
+
+    p:after {
+        content: "";
+        display: block;
+        width: 26%;
+        border-bottom: 3px solid #bcbcbc;
+        margin: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.project-content {
+    background: white;
+    // border-bottom: 1px solid #bcbcbc;
+    width: 75%;
+    height: 100%;
+
+    .project-list{
+        border: solid 1px;
+        display: inline-flex;
+        width : 90%;
+        height: 30%;        
+        margin: 1.5% auto 1.5% auto; // 상, 우, 하, 좌
+
+        .project-description{
+            border: solid 1px red;
+            height: 100%;
+            width: 60%;
+        }
+
+        .project-visual{
+            border: solid 1px blue;
+            height: 100%;
+            width: 40%;
+        }
+    }
+}

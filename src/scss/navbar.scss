@@ -1,0 +1,51 @@
+/****************************** 변수 ********************************/
+$commonHeight : 6vh;
+/*******************************************************************/
+li:hover {
+    opacity: 0.5;
+}
+
+.navbar
+{
+    background: rgba(0,0,0,0.6);
+    width : 100vw;
+    height : $commonHeight;
+    display: table-cell;
+    vertical-align: middle;
+    padding : 0.5vh 0.5vw;
+    position: fixed;
+    z-index: 1;
+    font-size: x-large;
+    ul{
+        list-style: none;
+    }
+}
+
+.navbar-home{
+    width: auto;
+    display: inline;
+    float : left;
+    margin-left: 3vw;
+    line-height: $commonHeight;
+    li {
+        margin-left: 1vw;
+        list-style: none;
+        color: #fff;
+    }
+    
+}
+
+.navbar-menu{
+    width: auto;
+    display: inline;
+    float: right;
+    line-height: $commonHeight;
+    ul {
+        display: inline;
+        li {
+            display: inline;            
+            margin-right: 3vw;
+            color: #fff;
+        }
+    }
+}
