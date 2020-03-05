@@ -7,7 +7,6 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 
 function Contect() {
-  console.log(typeof faGithub)
 
   interface passingObj {
     mail: [string, any, boolean],

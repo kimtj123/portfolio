@@ -3,12 +3,13 @@ import '../scss/skills.scss';
 
 interface SubjectProps {
   subtitle: string;
-  url: string[];
+  img: string[];
+  link: string;
 }
 
 
 
-function Subject({ subtitle, url }: SubjectProps) {
+function Subject({ subtitle, img, link }: SubjectProps) {
   return (
     <div className="skills-subject">
       <div className="skills-subtitle">
@@ -17,11 +18,11 @@ function Subject({ subtitle, url }: SubjectProps) {
       <div className="skills-col">
         <div className="skills-container">
           {
-            url.map(url => {
+            img.map((img, i) => {
               return (
                 <div className="skills-list">
-                  <a href="https://blog.naver.com/kimtajung1/221743015676">
-                    <img src={url} />
+                  <a href={link[i]} target="_blank">
+                    <img src={img} />
                     <div className="skills-link">
                       <p>블로그<br />보러가기</p>
                     </div>
