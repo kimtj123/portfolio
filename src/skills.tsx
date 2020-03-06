@@ -59,7 +59,7 @@ let subTitles: object = {
 function Skills() {
 
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="skills-title">
         <p>Skills</p>
       </div>

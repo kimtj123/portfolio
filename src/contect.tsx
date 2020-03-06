@@ -22,7 +22,7 @@ function Contect() {
   }
 
   return (
-    <div className="contect">
+    <div className="contect" id="contect">
       <div className="contect-title">
         <p>Contect</p>
       </div>

@@ -27,10 +27,13 @@ li:hover {
     float : left;
     margin-left: 3vw;
     line-height: $commonHeight;
-    li {
-        margin-left: 1vw;
-        list-style: none;
-        color: #fff;
+      ul {
+        display: inline;
+        li {
+            display: inline;            
+            margin-right: 1vw;
+            color: #fff;
+        }
     }
     
 }

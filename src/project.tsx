@@ -66,7 +66,7 @@ function Project() {
   }
 
   return (
-    <div className="project">
+    <div className="project" id="project">
       <div className="project-title">
         <p>Project</p>
       </div>
