@@ -2,7 +2,6 @@ import React from 'react';
 import './scss/home.scss';
 
 function Home() {
-
   return (
     <div className="home" id="home">
       <div className="home-container">
