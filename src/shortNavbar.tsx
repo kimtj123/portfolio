@@ -41,21 +41,6 @@ function Navbar() {
   let buttonVisible: any = { visibility: visual };
   let navVisible: any = { visibility: navVisual };
 
-  // const changeNavbar = (e: any) => {
-  //   console.log(e.currentTarget.parentNode.style)
-  //   // e.currentTarget.parentNode.style.visibility === "visible" ?
-  //   visual === "visible" ?
-  //     setVisual("hidden") :
-  //     setVisual("visible")
-
-  //   navVisual === "visible" ?
-  //     setNavVisual("hidden") :
-  //     setNavVisual("visible")
-
-
-  //   console.log(buttonVisible)
-  // }
-
 
   return (
     <nav className="navbar" >

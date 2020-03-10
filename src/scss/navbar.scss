@@ -4,7 +4,7 @@ $commonHeight : 6vh;
 li:hover {
     opacity: 0.5;
 }
-
+#f6f6f6
 .navbar
 {
     background: rgba(0,0,0,0.6);
@@ -23,8 +23,7 @@ li:hover {
 
 .navbar-home{
     width: auto;
-    display: inline;
-    float : left;
+    float: left;
     margin-left: 3vw;
     line-height: $commonHeight;
       ul {
@@ -34,6 +33,17 @@ li:hover {
             margin-right: 1vw;
             color: #fff;
         }
+    }
+    .navbar-close{
+        // visibility: hidden;
+        background: none;
+        border : none;
+        font-size: large;
+        display: inline;            
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+
     }
     
 }
@@ -51,4 +61,8 @@ li:hover {
             color: #fff;
         }
     }
+}
+
+.sidebar-menu{
+    visibility: hidden;
 }

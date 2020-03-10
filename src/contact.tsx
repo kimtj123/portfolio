@@ -1,12 +1,12 @@
 import React from 'react';
-import './scss/contect.scss';
-import ContectList from './sub-component/contect-list';
+import './scss/contact.scss';
+import ContactList from './sub-component/contact-list';
 
 import { faGithub, faBlogger } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 
-function Contect() {
+function Contact() {
 
   interface passingObj {
     mail: [string, any, boolean],
@@ -14,7 +14,7 @@ function Contect() {
     blog: [string, any, boolean]
   }
 
-  let contectInfo: passingObj =
+  let contactInfo: passingObj =
   {
     mail: ["kimtajung1@gmail.com", faEnvelope, false],
     github: ["https://github.com/kimtj123", faGithub, true],
@@ -22,14 +22,14 @@ function Contect() {
   }
 
   return (
-    <div className="contect" id="contect">
-      <div className="contect-title">
-        <p>Contect</p>
+    <div className="contact" id="contact">
+      <div className="contact-title">
+        <p>Contact</p>
       </div>
-      <div className="contect-content">
+      <div className="contact-content">
         {
-          Object.values(contectInfo).map((info) =>
-            <ContectList contectInfo={info} />
+          Object.values(contactInfo).map((info) =>
+            <ContactList contactInfo={info} />
           )
         }
       </div>
@@ -37,4 +37,4 @@ function Contect() {
   );
 }
 
-export default Contect;
+export default Contact;

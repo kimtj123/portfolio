@@ -10,17 +10,26 @@ function ProjectList({ project }: any) {
   }
   return (
     <div className="project-list" >
+      {
+        project.gif.length > 1 ?
+          <div className="project-visual multiple" style={image}>
+            {project.gif.map((val: string, i: number) => <img src={val} className={"gif" + i} />)}
+          </div> :
+          <div className="project-visual">
+            <img src={project.gif[0]} />
+          </div>
+      }
       <div className="project-description">
         <div className="project-subtitle">
           <p>{project.title}</p>
         </div>
         <div className="project-term">
           <p>
-            기간 : {project.term}
+            {project.term}
           </p>
         </div>
         <div className="project-stack">
-          <p>Stack : {project.stack.map((val: string) => `${val}, `)}</p>
+          <p>{project.stack.map((val: string) => `${val}, `)}</p>
         </div>
         <div className="project-comment">
           <p>{project.comment}</p>
@@ -35,15 +44,6 @@ function ProjectList({ project }: any) {
           }
         </div>
       </div>
-      {
-        project.gif.length > 1 ?
-          <div className="project-visual multiple" style={image}>
-            {project.gif.map((val: string, i: number) => <img src={val} className={"gif" + i} />)}
-          </div> :
-          <div className="project-visual">
-            <img src={project.gif[0]} />
-          </div>
-      }
     </div>
   );
 }
