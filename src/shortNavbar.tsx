@@ -35,23 +35,16 @@ function Navbar() {
 
   let home: string[] = ["HOME"]
   let list: string[] = ["ABOUT", "SKILLS", "PROJECT", "CONTECT"];
-  let [visual, setVisual] = useState("visible")
-  let [navVisual, setNavVisual] = useState("hidden")
-
-  let buttonVisible: any = { visibility: visual };
-  let navVisible: any = { visibility: navVisual };
 
 
   return (
     <nav className="navbar" >
       <div className="navbar-home">
         <ul>
-          {navBarList(home)}
         </ul>
       </div>
       <div className="navbar-menu">
         <ul>
-          {navBarList(list)}
         </ul>
       </div>
       <button className="sidebar-menu">

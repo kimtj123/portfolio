@@ -10,10 +10,12 @@ function ContactList({ contactInfo }: any) {
       <FontAwesomeIcon icon={contactInfo[1]} size="2x" />
       {
         contactInfo[2] ?
-          <a className="contact-info" href={contactInfo[0]} target="_blank">
+          <a className="contact-info" href={contactInfo[0]}
+            target="_blank" rel="noopener noreferrer">
             {contactInfo[0]}
           </a> :
-          <a className="contact-info"> {contactInfo[0]}
+          <a className="contact-info">
+            {contactInfo[0]}
           </a>
       }
     </div>

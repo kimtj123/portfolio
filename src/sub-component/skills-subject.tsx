@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../scss/skills.scss';
 
 interface SubjectProps {
@@ -20,9 +20,14 @@ function Subject({ subtitle, img, link }: SubjectProps) {
           {
             img.map((img, i) => {
               return (
-                <div className="skills-list">
-                  <a href={link[i]} target="_blank">
-                    <img src={img} />
+                <div className="skills-list" key={`skills-list${i}`}>
+                  <a href={link[i]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={img}
+                      alt="kind of skill"
+                    />
                     <div className="skills-link">
                       <p>블로그<br />보러가기</p>
                     </div>

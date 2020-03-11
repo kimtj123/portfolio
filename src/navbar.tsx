@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './scss/navbar.scss';
 import menu from "./img/menu.png"
 import { Link, animateScroll as scroll } from 'react-scroll'
-import useWindowSize from "./sub-component/getWidth"
 
 
 function navBarList(listArray: string[]) {
@@ -12,7 +11,7 @@ function navBarList(listArray: string[]) {
   for (i = 0; i < listArray.length; i++) {
     if (listArray.length !== 1) {
       arr.push(
-        <li className="menu-items">
+        <li className="menu-items" key={`menu-items${i}`}>
           <Link activeClass="active" to={listArray[i].toLowerCase()} spy={true} smooth={true} offset={-67} duration={500}>
             {listArray[i]}
           </Link>
@@ -21,7 +20,9 @@ function navBarList(listArray: string[]) {
     }
     else {
       arr.push(
-        <li className="menu-home" onClick={() => scroll.scrollTo(0)}>
+        <li className="menu-home"
+          key={`menu-home${i}`}
+          onClick={() => scroll.scrollTo(0)}>
           {listArray[i]}
         </li>
       )
@@ -31,30 +32,13 @@ function navBarList(listArray: string[]) {
 }
 
 function Navbar() {
-  let windowSize = useWindowSize();
-
   let home: string[] = ["HOME"]
   let list: string[] = ["ABOUT", "SKILLS", "PROJECT", "CONTECT"];
-  let [visual, setVisual] = useState("visible")
-  let [navVisual, setNavVisual] = useState("hidden")
+  // let [visual, setVisual] = useState("visible")
+  // let [navVisual, setNavVisual] = useState("hidden")
 
-  let buttonVisible: any = { visibility: visual };
-  let navVisible: any = { visibility: navVisual };
-
-  // const changeNavbar = (e: any) => {
-  //   console.log(e.currentTarget.parentNode.style)
-  //   // e.currentTarget.parentNode.style.visibility === "visible" ?
-  //   visual === "visible" ?
-  //     setVisual("hidden") :
-  //     setVisual("visible")
-
-  //   navVisual === "visible" ?
-  //     setNavVisual("hidden") :
-  //     setNavVisual("visible")
-
-
-  //   console.log(buttonVisible)
-  // }
+  // let buttonVisible: any = { visibility: visual };
+  // let navVisible: any = { visibility: navVisual };
 
 
   return (

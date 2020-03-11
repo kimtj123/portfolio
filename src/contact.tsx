@@ -28,8 +28,8 @@ function Contact() {
       </div>
       <div className="contact-content">
         {
-          Object.values(contactInfo).map((info) =>
-            <ContactList contactInfo={info} />
+          Object.values(contactInfo).map((info, i) =>
+            <ContactList contactInfo={info} key={`contactList${i}`} />
           )
         }
       </div>

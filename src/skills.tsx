@@ -70,6 +70,7 @@ function Skills() {
               subtitle={group.title}
               img={group.image}
               link={group.link}
+              key={`subject${i}`}
             />
           )
         }

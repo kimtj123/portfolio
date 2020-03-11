@@ -73,7 +73,7 @@ function Project() {
       <div className="project-content">
         {
           Object.values(projectInfo).map((project, i) =>
-            <ProjectList project={project} />)
+            <ProjectList project={project} key={`projectList${i}`} />)
         }
       </div>
     </div>

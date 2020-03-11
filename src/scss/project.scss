@@ -48,6 +48,7 @@
         display: block;
         width : $standard;
         max-width: 400px;
+        min-width: 300px;
         height: $standard*3;        
         margin: 2% auto 0 auto; // 상, 우, 하, 좌
         

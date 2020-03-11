@@ -4,7 +4,7 @@ $commonHeight : 6vh;
 li:hover {
     opacity: 0.5;
 }
-#f6f6f6
+
 .navbar
 {
     background: rgba(0,0,0,0.6);
@@ -65,4 +65,53 @@ li:hover {
 
 .sidebar-menu{
     visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        text-align: center;
+        justify-content: center;
+        right: 0;
+        padding : 0.5vh 0.5vw;
+        position: fixed;
+        z-index: 1;
+        font-size: medium;
+        ul{
+            list-style: none;
+        }
+    }
+    .navbar-home{
+        display: contents;
+        ul{
+            height: 10vh;
+            li {                          
+                color: #fff;
+                display: block;   
+                margin-right: 3vw;
+            }
+        }
+    }
+    .navbar-menu{
+        width: auto;
+        display: contents;
+        float: right;
+        line-height: $commonHeight;
+
+        ul{
+            height: 40vh;
+            li {
+                display: block;             
+                color: #fff;
+            }
+        }
+    }
+
+    .sidebar-menu{
+        visibility: visible;
+        background: none;
+        border : 0;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 1.5vh; /* Position the navbar at the top of the page */
+        right: 1.5vw; /* Position the navbar at the top of the page */
+    }
 }
