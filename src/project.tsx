@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/project.scss';
 import ProjectList from './sub-component/project-list'
+import Card from './sub-component/card'
 
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faBlogger } from "@fortawesome/free-brands-svg-icons";
@@ -71,10 +72,13 @@ function Project() {
         <p>Project</p>
       </div>
       <div className="project-content">
-        {
+        {/* {
           Object.values(projectInfo).map((project, i) =>
             <ProjectList project={project} key={`projectList${i}`} />)
-        }
+        } */}
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );
