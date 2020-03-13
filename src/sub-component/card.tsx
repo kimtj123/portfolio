@@ -1,34 +1,6 @@
 import React from 'react';
 import '../scss/card.scss';
 
-function multipleElements() {
-
-  let elements = [];
-  for (let i = 0; i < 20; i++) {
-    elements.push(
-      <div key={i}> element{i + 1} </div>
-    )
-  }
-  return elements;
-}
-
-//this function will separate each four element to display 
-function separateElement() {
-  var separateElements = [];
-  var multiElements = multipleElements();
-
-  for (var i = 0; i < multiElements.length; i += 4) {
-    var oneRow = [];
-    oneRow.push(multiElements.slice(i, i + 4).map(item => {
-      return <div style={{ display: 'inline-block' }}>{item}</div>
-    }))
-    separateElements.push(oneRow.map(itm => { return <div>{itm}</div> }))
-  }
-  return separateElements;
-}
-
-
-
 function Card(props: any, index: number) {
   let result = props.info.comment.split('n');
   return (
@@ -41,17 +13,17 @@ function Card(props: any, index: number) {
           // 스택 부분
           props.info.stack.map((val: string, i: number, stack: any) => {
             if (i % 2 === 1 || i === stack.length - 1) {
-              return (<p>{`#${stack[i - 1]}` + ' ' + `#${stack[i]}`}</p>)
+              return (<p className="stack">{`#${stack[i - 1]}` + ' ' + `#${stack[i]}`}</p>)
             }
           })
         }
-        {result.map((val: string) => <p className={`comment`}>
-          {val} <br />
-        </p>)}
+        <div className="comment-wraaper">
+          {result.map((val: string) => <p className={`comment`}>
+            {val} <br />
+          </p>)}
+        </div>
         <ul>
-          <li>내용 1</li>
-          <li>내용 2</li>
-          <li>내용 3</li>
+          {props.info.desc.map((val: string) => <li>{val}</li>)}
         </ul>
       </div>
       <div className={`card-button card${props.index}`}>

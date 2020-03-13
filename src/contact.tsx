@@ -2,23 +2,17 @@ import React from 'react';
 import './scss/contact.scss';
 import ContactList from './sub-component/contact-list';
 
-import { faGithub, faBlogger } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-
-
 function Contact() {
 
   interface passingObj {
-    mail: [string, any, boolean],
-    github: [string, any, boolean],
-    blog: [string, any, boolean]
+    mail: string
+    phone: string
   }
 
   let contactInfo: passingObj =
   {
-    mail: ["kimtajung1@gmail.com", faEnvelope, false],
-    github: ["https://github.com/kimtj123", faGithub, true],
-    blog: ["https://blog.naver.com/kimtajung1", faBlogger, true],
+    mail: "Email : kimtajung1@gmail.com",
+    phone: "Phone : 010-8764-6754"
   }
 
   return (

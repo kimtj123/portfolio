@@ -12,7 +12,7 @@
     margin: 0 auto;
 
     p {
-        color: #455c82;
+        color: #444;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
@@ -25,7 +25,7 @@
         content: "";
         display: block;
         width: 2.3em;
-        border-bottom: 3px solid #82D580;
+        border-bottom: 3px solid #333;
         margin: 1vh;
         margin-left: auto;
         margin-right: auto;
@@ -33,25 +33,24 @@
 }
 
 .contact-content{
-    width : 75%;
-    margin-top: auto;
-    margin-bottom: auto;
 
-    .contact-container{        
+    width : 75%;
+    margin : auto;
+    padding: 40px 0;
+
+    .contact-container{     
+
         padding-top: 0.5%;
         padding-bottom: 0.5%;
+        
         .contact-info{
-            font-size: 2vw;
+            font-size: 1.2em;
             margin: 0;
-            margin-left: 1%;            
+            margin-left: 1%;       
         }
     
-        // svg{
-        //     width : 2vw;
-        //     height:  2vh;
-        // }
-        a {
-            color : black;
+        p {
+            color : black;    
         }
     }    
 }

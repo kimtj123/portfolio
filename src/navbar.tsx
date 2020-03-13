@@ -43,15 +43,18 @@ function Navbar() {
 
   return (
     <nav className="navbar" >
-      <div className="navbar-home">
-        <ul>
-          {navBarList(home)}
-        </ul>
-      </div>
-      <div className="navbar-menu">
-        <ul>
-          {navBarList(list)}
-        </ul>
+      {/* navbar-content를 크기에 따라 옵션을 주면 된다. */}
+      <div className="navbar-contents">
+        <div className="navbar-home">
+          <ul>
+            {navBarList(home)}
+          </ul>
+        </div>
+        <div className="navbar-menu">
+          <ul>
+            {navBarList(list)}
+          </ul>
+        </div>
       </div>
       <button className="sidebar-menu">
         <img src={menu} />
