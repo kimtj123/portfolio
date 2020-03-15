@@ -1,9 +1,6 @@
 /****************************** 변수 ********************************/
 $commonHeight : 6vh;
 /*******************************************************************/
-li:hover {
-    opacity: 0.5;
-}
 
 .navbar
 {
@@ -19,48 +16,87 @@ li:hover {
     ul{
         list-style: none;
     }
-}
 
-.navbar-home{
-    width: auto;
-    float: left;
-    margin-left: 3vw;
-    line-height: $commonHeight;
-      ul {
-        display: inline;
-        li {
-            display: inline;            
-            margin-right: 1vw;
-            color: #fff;
-        }
-    }
-    .navbar-close{
-        // visibility: hidden;
-        background: none;
-        border : none;
-        font-size: large;
-        display: inline;            
-        margin-right: auto;
-        margin-left: auto;
-        color: #fff;
-
-    }
-    
-}
-
-.navbar-menu{
-    width: auto;
-    display: inline;
-    float: right;
-    line-height: $commonHeight;
     ul {
         display: inline;
+        line-height: 6vh;
+        
+        .menu-items{
+            float: right;
+        }
+    
         li {
             display: inline;            
             margin-right: 3vw;
             color: #fff;
-        }
-    }
+            a{
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) scaleX(0);
+                    transform-origin: 50% 50%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(255,255,255,0.8);
+                    transition: transform 250ms;
+                }
+                
+                &:hover {
+                    
+                    &::after {
+                        transform: translateX(-50%) scaleX(1);
+                    }
+                    
+                }
+            }
+        }     
+        
+}
+
+// .navbar-home{
+//     width: auto;
+//     float: left;
+//     margin-left: 3vw;
+//     line-height: $commonHeight;
+//       ul {
+//         display: inline;
+//         li {
+//             display: inline;            
+//             margin-right: 1vw;
+//             color: #fff;
+//         }
+//     }
+//     .navbar-close{
+//         // visibility: hidden;
+//         background: none;
+//         border : none;
+//         font-size: large;
+//         display: inline;            
+//         margin-right: auto;
+//         margin-left: auto;
+//         color: #fff;
+
+//     }
+    
+// }
+
+
+    
+    // .menu-items ::after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 0;
+    //     transform: translateX(-50%) scaleX(0);
+    //     transform-origin: 50% 50%;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: rgba(255,255,255,0.8);
+    //     transition: transform 250ms;
+    // }
 }
 
 .sidebar-menu{

@@ -9,9 +9,9 @@ function navBarList(listArray: string[]) {
   let arr = [];
 
   for (i = 0; i < listArray.length; i++) {
-    if (listArray.length !== 1) {
+    if (listArray[i] === "HOME") {
       arr.push(
-        <li className="menu-items" key={`menu-items${i}`}>
+        <li className="menu-home" key={`menu-home${i}`}>
           <Link activeClass="active" to={listArray[i].toLowerCase()} spy={true} smooth={true} offset={-67} duration={500}>
             {listArray[i]}
           </Link>
@@ -20,10 +20,10 @@ function navBarList(listArray: string[]) {
     }
     else {
       arr.push(
-        <li className="menu-home"
-          key={`menu-home${i}`}
-          onClick={() => scroll.scrollTo(0)}>
-          {listArray[i]}
+        <li className="menu-items" key={`menu-items${i}`}>
+          <Link activeClass="active" to={listArray[i].toLowerCase()} spy={true} smooth={true} offset={-67} duration={500}>
+            {listArray[i]}
+          </Link>
         </li>
       )
     }
@@ -31,30 +31,19 @@ function navBarList(listArray: string[]) {
   return arr;
 }
 
+
 function Navbar() {
-  let home: string[] = ["HOME"]
-  let list: string[] = ["ABOUT", "SKILLS", "PROJECT", "CONTECT"];
-  // let [visual, setVisual] = useState("visible")
-  // let [navVisual, setNavVisual] = useState("hidden")
-
-  // let buttonVisible: any = { visibility: visual };
-  // let navVisible: any = { visibility: navVisual };
-
+  // HOME 을 제외하고 float : right 시 먼저 위치한 value가 최 우측으로 가는 현상 발생
+  // 이에 역순으로 넣어서 제작
+  let list: string[] = ["HOME", "CONTACT", "PROJECT", "SKILLS", "ABOUT"];
 
   return (
     <nav className="navbar" >
       {/* navbar-content를 크기에 따라 옵션을 주면 된다. */}
       <div className="navbar-contents">
-        <div className="navbar-home">
-          <ul>
-            {navBarList(home)}
-          </ul>
-        </div>
-        <div className="navbar-menu">
-          <ul>
-            {navBarList(list)}
-          </ul>
-        </div>
+        <ul>
+          {navBarList(list)}
+        </ul>
       </div>
       <button className="sidebar-menu">
         <img src={menu} />

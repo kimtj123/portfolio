@@ -21,7 +21,7 @@ body{
     padding-top: calc(50vh - 6vh - 3vw);
     display: flex;
     justify-content: center;
-    
+
     p{        
         color: white;
         margin: 0;
@@ -35,6 +35,24 @@ body{
         animation: 
             typing 5s steps(40, end),
             blink-caret .75s step-end infinite;
+    }
+}
+
+.home-link{
+        text-align: center;
+    .home-button{
+        text-decoration: none;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 600;
+        margin: 30px 10px;
+        padding: 12px 40px;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
