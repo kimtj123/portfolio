@@ -152,3 +152,22 @@ $cardWidth : 320px;
     margin:30px;
   }
 }
+
+
+@media screen and (max-width: 768px){
+  .card{
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 380px 70px;
+    border: none;
+
+    .card-text{
+      h2{
+        margin:0 5px;
+      }
+      
+      .comment-wraaper{
+        margin: 10px;        
+      }
+    }
+  }
+}

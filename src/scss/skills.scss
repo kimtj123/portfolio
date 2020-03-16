@@ -1,17 +1,15 @@
 .skills{
     background: #f6f6f6;
     transition-duration: 2s;
-    height: 650px;
     padding-top: 50px;
     padding-bottom: 100px;
     text-align: center;
 }
 
 .skills-title{
+    width: 100%;
     display: inline-block;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin : 0 auto 30px auto;
 
     p {
         color: #444;
@@ -34,10 +32,10 @@
 }
 
 .skills-content {
-    width: 75%;
+    display: inline-flex;
+    width: 60%;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin : 0 auto;
 
     p {
         display: table-cell;
@@ -46,19 +44,20 @@
         margin : 0;
     }
 
+    .skills-col{
+        display: block;
+    }
     .skills-subject{
-        height: 50%;
+        text-align: center;
+        width: 50%;
     }
     .skills-subtitle{
+        display: inline;
         padding-top: 15px;
         padding-bottom: 15px;
-        position: relative;
-        width: fit-content;
-        height: 19%;
-        left: 50%;
-        transform: translateX(-50%);
+
         p{
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 600;
             margin-top: 1vh;
             margin-bottom: 1vh;
@@ -66,17 +65,15 @@
     }
 
     .skills-col{       
-        display: flex;    
-        
         .skills-container{
             display: flex;    
-            margin: 0 auto;
+            margin: 30px auto;
+            width: fit-content;
         }
         .skills-list{
             position: relative;
             width: 150px;
             height: 150px;
-            margin-right: 2vw;            
             background-size: cover;
             background-repeat: no-repeat;
             a{
@@ -97,6 +94,9 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
+        }
+        .first{
+            margin-right: 2vw;            
         }        
         .skills-link{
             position: absolute;
@@ -108,10 +108,42 @@
         }
       
     }
+    .left{
+        border-right: solid 1px lightgrey;
+    }
     .skills-list:hover{
         opacity: 0.3;
         .skills-link{
             visibility: visible;
         }  
+    }
+}
+
+@media screen and (max-width: 768px){
+    .skills
+    {
+        .skills-title{
+            padding-top: 30px;
+        }
+        .skills-content{
+            display: block;
+
+            .skills-subject{
+                width: 100%;
+                
+                p{
+                    font-size: 1.4em;
+                }
+            }
+
+            .left{
+                border: none;                
+            }
+
+            .skills-list{
+                width: 50%;
+                height: 50%;
+            }
+        }
     }
 }

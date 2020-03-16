@@ -53,8 +53,10 @@ $cardCount: 50;
 }
 
 
-@media screen and (max-width: 1024px) {
-    .project-content {
+@media screen and (max-width: 768px) {
+    .project-content {        
+        display: block;
+        width: auto;
     }
     
 }
