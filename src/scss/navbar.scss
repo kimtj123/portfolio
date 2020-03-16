@@ -4,7 +4,7 @@ $commonHeight : 6vh;
 
 .navbar
 {
-    background: rgba(0,0,0,0.6);
+    background: rgba(2, 2, 2, 0.3);
     width : 100vw;
     height : $commonHeight;
     display: table-cell;
@@ -13,6 +13,7 @@ $commonHeight : 6vh;
     position: fixed;
     z-index: 1;
     font-size: larger;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
     ul{
         list-style: none;
     }
@@ -54,49 +55,12 @@ $commonHeight : 6vh;
             }
         }     
         
+    }
+
 }
 
-// .navbar-home{
-//     width: auto;
-//     float: left;
-//     margin-left: 3vw;
-//     line-height: $commonHeight;
-//       ul {
-//         display: inline;
-//         li {
-//             display: inline;            
-//             margin-right: 1vw;
-//             color: #fff;
-//         }
-//     }
-//     .navbar-close{
-//         // visibility: hidden;
-//         background: none;
-//         border : none;
-//         font-size: large;
-//         display: inline;            
-//         margin-right: auto;
-//         margin-left: auto;
-//         color: #fff;
-
-//     }
-    
-// }
-
-
-    
-    // .menu-items ::after {
-    //     content: '';
-    //     position: absolute;
-    //     left: 50%;
-    //     bottom: 0;
-    //     transform: translateX(-50%) scaleX(0);
-    //     transform-origin: 50% 50%;
-    //     width: 100%;
-    //     height: 1px;
-    //     background-color: rgba(255,255,255,0.8);
-    //     transition: transform 250ms;
-    // }
+.changed {
+    background : black;
 }
 
 .sidebar-menu{
@@ -105,49 +69,23 @@ $commonHeight : 6vh;
 
 @media screen and (max-width: 768px) {
     .navbar{
-        text-align: center;
-        justify-content: center;
-        right: 0;
-        padding : 0.5vh 0.5vw;
-        position: fixed;
-        z-index: 1;
-        font-size: medium;
-        ul{
-            list-style: none;
-        }
-    }
-    .navbar-home{
-        display: contents;
-        ul{
-            height: 10vh;
-            li {                          
-                color: #fff;
-                display: block;   
-                margin-right: 3vw;
-            }
-        }
-    }
-    .navbar-menu{
-        width: auto;
-        display: contents;
-        float: right;
-        line-height: $commonHeight;
+        background: none;
+        padding : 0.5vh 0vw;
+        // display: none;
 
-        ul{
-            height: 40vh;
-            li {
-                display: block;             
-                color: #fff;
-            }
+        .navbar-contents{
+            display: none;
         }
+    }    
+    .changed{
+        background : none;
     }
-
     .sidebar-menu{
         visibility: visible;
         background: none;
         border : 0;
         position: fixed; /* Set the navbar to fixed position */
-        top: 1.5vh; /* Position the navbar at the top of the page */
+        top: 0; /* Position the navbar at the top of the page */
         right: 1.5vw; /* Position the navbar at the top of the page */
     }
 }

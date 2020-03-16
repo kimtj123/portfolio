@@ -1,3 +1,6 @@
+$cardWidth: 320;
+$cardMargin: 50;
+$cardCount: 50;
 .project{
     background: white;
     padding-top: 30px;
@@ -32,7 +35,7 @@
 
 .project-content {
     display: flex;
-    width : (300+(50*2))*3px;
+    width : ($cardWidth+($cardMargin*2))*3px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -44,150 +47,15 @@
         border-radius: 10px;
         display: block;
         width : $standard;
-        max-width: 400px;
-        min-width: 300px;
         height: $standard*3;        
-        margin: 2% auto 0 auto; // 상, 우, 하, 좌
-        
-
-        .project-description{
-            height: 100%;
-            // width: 60%;
-            padding: 2% 5% 2% 5%;
-            margin-left: auto;
-            margin-right: auto;
-            p{
-                margin-top: 0;
-                margin-bottom: 1vh;
-            }
-            a{
-                color : black;
-                margin-right: 1vw;
-            }
-            .project-subtitle{                
-                font-size: 2.5em;
-                text-align: center;
-            }
-            .project-term{
-                font-size: 1em;
-            }
-            .project-stack{
-                font-size: 1em;
-            }
-            .project-comment{
-                font-size: 1em;
-            }            
-            .project-link{
-                // font-size: 1.3em;
-            }
-        }
-
-        .project-visual{
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center; 
-            // border-left: solid 1px gainsboro;            
-            text-align: center;
-            height: 40%;
-            width: 100%;
-        }
-    }
-
-    .project-visual{
-        border-radius: 0px 10px 10px 0px;
-
-        .project-image{
-            width: 100%;
-            height:100%;
-        }
-        .multiple{
-            display : flex;
-        }
-        img {    
-            border-radius: 10px 10px 0px 0px;
-            width: 100%;
-            height: 100%;
-        }
-        .gif0{
-            border-radius: 10px 10px 0px 0px;
-            width: 100%;
-            height: 49%;
-        }
-        .gif1{
-            border-radius: 10px 10px 0px 0px;
-            width: 100%;
-            height: 49%;
-        }
+        margin: 2% auto 0 auto; // 상, 우, 하, 좌    
     }
 }
 
 
 @media screen and (max-width: 1024px) {
     .project-content {
-        .project-list{
-            .project-description{
-                p{
-                    margin-top: 0;
-                    margin-bottom: 1vh;
-                }
-                a{
-                    color : black;
-                    margin-right: 1vw;
-                }
-                .project-subtitle{                
-                    font-size: 2em;
-                    text-align: center;
-                }
-                .project-term{
-                    font-size: 1em;
-                }
-                .project-stack{
-                    font-size: 1em;
-                }
-                .project-comment{
-                    font-size: 1em;
-                }            
-                .project-link{
-                    // font-size: 1.3em;
-                }
-            }
-    
-            .project-visual{
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center; 
-                // border-left: solid 1px gainsboro;            
-                text-align: center;
-                height: 40%;
-                width: 100%;
-            }
-        }
-    
-        .project-visual{
-            border-radius: 0px 10px 10px 0px;
-    
-            .project-image{
-                width: 100%;
-                height:100%;
-            }
-            .multiple{
-                display : flex;
-            }
-            img {    
-                border-radius: 10px 10px 0px 0px;
-                width: 100%;
-                height: 100%;
-            }
-            .gif0{
-                border-radius: 10px 10px 0px 0px;
-                width: 100%;
-                height: 49%;
-            }
-            .gif1{
-                border-radius: 10px 10px 0px 0px;
-                width: 100%;
-                height: 49%;
-            }
-        }
     }
-  }
+    
+}
+  

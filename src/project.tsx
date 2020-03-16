@@ -39,6 +39,7 @@ function Project() {
         "https://blog.naver.com/kimtajung1/221744290215"
       ],
       desc: [
+        "개인 프로젝트",
         "JWT를 활용해 회원 가입 / 정보 수정, 로그인, 로그아웃 구현",
         "보드/카드/리스트에 대한 CRUD 구현",
         "mongoose를 통해 서버 스키마 작성"
@@ -55,7 +56,7 @@ function Project() {
         "https://blog.naver.com/kimtajung1/221734201049"
       ],
       desc: [
-        "기업제안 프로젝트를 진행",
+        "팀 프로젝트 / 기업제안 프로젝트",
         "Horizontal scroll, FlatList를 활용한 메인페이지 구성",
         "회원정보 표시,수정,탈퇴 기능 구현",
         "JWT를 사용한 로그인 권한 체크",
@@ -74,6 +75,7 @@ function Project() {
         "https://blog.naver.com/kimtajung1/221694557904"
       ],
       desc: [
+        "팀 프로젝트",
         "로그인 / 로그아웃 구현",
         "로그인 이전 / 이후에 제공되는 메인페이지 구현",
         "선호작물에 대한 정보/상태 표시 기능",

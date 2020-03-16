@@ -1,11 +1,11 @@
 $cardBackground0: #F8981D;
 $cardBackground1: #E12E4B;
 $cardBackground2: #5BBDC8;
-
+$cardWidth : 320px;
 
 .card {
     display: grid;
-    grid-template-columns: 320px;
+    grid-template-columns: $cardWidth;
     grid-template-rows: 210px 400px 80px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
@@ -132,3 +132,23 @@ $cardBackground2: #5BBDC8;
     transform: scale(1.01);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
+
+
+
+@media screen and (max-width: 1250px){
+  .card{
+    grid-template-columns: $cardWidth - 30px;
+    grid-template-rows: 210px 400px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    border: solid 1px lightgray;
+
+    // box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+}

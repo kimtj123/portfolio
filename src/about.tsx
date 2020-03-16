@@ -24,12 +24,12 @@ function About() {
           <div className="about-experience">
             <h2>Experience</h2>
             <ul>
-              <li>
+              <li className="experience-list">
                 <p className="title">Immersive Course</p>
                 <p className="company">CODE STATES</p>
                 <p className="date">2019/09 ~ 2019/12</p>
               </li>
-              <li>
+              <li className="experience-list">
                 <p className="title">2017 대학유망팀300</p>
                 <p className="company">넥스트레인</p>
                 <p className="date">2017.03 ~ 2017.10</p>

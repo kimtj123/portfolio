@@ -1,5 +1,6 @@
 import React from 'react';
 import './scss/home.scss';
+import getWidth from "./sub-component/getWidth"
 
 function Home() {
   return (
@@ -9,8 +10,8 @@ function Home() {
           <p>Developer 김태중 의 포트폴리오 입니다.</p>
         </div>
         <div className="home-link">
-          <a className="home-button">blog</a>
-          <a className="home-button">github</a>
+          {/* <a className="home-button">blog</a>
+          <a className="home-button">github</a> */}
         </div>
       </div>
     </div>
