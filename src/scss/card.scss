@@ -135,7 +135,7 @@ $cardWidth : 320px;
 
 
 
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1300px){
   .card{
     grid-template-columns: $cardWidth - 30px;
     grid-template-rows: 210px 400px 80px;
@@ -153,12 +153,32 @@ $cardWidth : 320px;
   }
 }
 
+@media screen and (max-width: 1050px){
+  .card{
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 420px 70px;
+    max-width: 400px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    border: solid 1px lightgray;
+
+    // box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:3px;
+  }
+}
 
 @media screen and (max-width: 768px){
   .card{
     grid-template-columns: 100%;
     grid-template-rows: 180px 380px 70px;
     border: none;
+    max-width: 400px;
+    margin: 20px auto;
 
     .card-text{
       h2{

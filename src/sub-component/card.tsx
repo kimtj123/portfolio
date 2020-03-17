@@ -3,6 +3,27 @@ import '../scss/card.scss';
 
 function Card(props: any, index: number) {
   let result = props.info.comment.split('n');
+  let linkBox = props.info.link
+
+  let linkButton = (link: string, i: number) => {
+    let values = ["Github", "Blog", "Site"]
+    return link === "null" ?
+      <a>
+        <button className="button"
+          onClick={() => alert("해당 프로젝트는 함께 진행한 기업에 소유권이 있어 소스코드를 공개할 수 없습니다.")}>
+          <div className="value">{values[i]}</div>
+        </button>
+      </a> :
+      <a href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="button">
+          <div className="value">{values[i]}</div>
+        </button>
+      </a>
+  }
+
   return (
     <div className="card">
       <div className="card-image"></div>
@@ -17,6 +38,7 @@ function Card(props: any, index: number) {
             }
           })
         }
+        {/*한줄 소개, 상세내용 */}
         <div className="comment-wraaper">
           {result.map((val: string) => <p className={`comment`}>
             {val} <br />
@@ -26,33 +48,13 @@ function Card(props: any, index: number) {
           {props.info.desc.map((val: string) => <li>{val}</li>)}
         </ul>
       </div>
+      {/*버튼 부분 */}
       <div className={`card-button card${props.index}`}>
-        <a href={props.info.link[0]}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="button">
-            <div className="value">Github</div>
-          </button>
-        </a>
+        {linkButton(linkBox[0], 0)}
         <div className="button-middle">
-          <a href={props.info.link[1]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="button border">
-              <div className="value">Blog</div>
-            </button>
-          </a>
+          {linkButton(linkBox[1], 1)}
         </div>
-        <a href={props.info.link[2]}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="button" onClick={() => console.log("Site")}>
-            <div className="value">Site</div>
-          </button>
-        </a>
+        {linkButton(linkBox[2], 2)}
       </div>
     </div>
 

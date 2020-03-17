@@ -52,17 +52,19 @@ function Navbar() {
   });
 
   return (
-    <nav className={position === 0 ? "navbar" : "navbar changed"} >
-      {/* navbar-content를 크기에 따라 옵션을 주면 된다. */}
-      <div className="navbar-contents">
-        <ul>
-          {navBarList(list)}
-        </ul>
-      </div>
+    <div className={position === 0 ? "navbar" : "navbar changed"}>
+      <nav>
+        {/* navbar-content를 크기에 따라 옵션을 주면 된다. */}
+        <div className="navbar-contents">
+          <ul>
+            {navBarList(list)}
+          </ul>
+        </div>
+      </nav>
       <button className="sidebar-menu" onClick={() => { console.log(1) }}>
         <img src={menu} />
       </button>
-    </nav>
+    </div>
   );
 }
 

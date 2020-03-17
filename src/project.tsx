@@ -35,8 +35,8 @@ function Project() {
       comment: "Trello 커버 프로젝트",
       link: [
         "https://github.com/kimtj123/Mozzarello",
-        "https://www.notion.so/Mozzarello-96f0734b4e2148a290cf787c6649062e",
-        "https://blog.naver.com/kimtajung1/221744290215"
+        "https://blog.naver.com/kimtajung1/221744290215",
+        "https://www.notion.so/Mozzarello-96f0734b4e2148a290cf787c6649062e"
       ],
       desc: [
         "개인 프로젝트",
@@ -52,8 +52,9 @@ function Project() {
       stack: ["Javascript", "React-Native", "Native-Base"],
       comment: "온라인 콘서트 티켓 발권 서비스",
       link: [
-        "https://bit.ly/36cHJ9g",
-        "https://blog.naver.com/kimtajung1/221734201049"
+        "null",
+        "https://blog.naver.com/kimtajung1/221734201049",
+        "https://bit.ly/36cHJ9g"
       ],
       desc: [
         "팀 프로젝트 / 기업제안 프로젝트",
@@ -71,8 +72,8 @@ function Project() {
       comment: "위치·날씨 정보를 기반으로n관심작물의 상태와 정보 표시",
       link: [
         "https://github.com/codestates/Farmers-client",
+        "https://blog.naver.com/kimtajung1/221694557904",
         "https://www.notion.so/5-Farmers-Botanists-04917b9e582f43b982353d3db0a9498d",
-        "https://blog.naver.com/kimtajung1/221694557904"
       ],
       desc: [
         "팀 프로젝트",
