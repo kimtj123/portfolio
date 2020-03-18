@@ -1,19 +1,18 @@
 .skills{
-    background: #F4F3EA;
-    display: flex;
-    width: 100%;
-    height: 80vh;    
-    transition-duration: 2s
+    background: #f6f6f6;
+    transition-duration: 2s;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
 }
 
 .skills-title{
-    display: table;
-    width: 25%;
-    height: 100%;
+    width: 100%;
+    display: inline-block;
+    margin : 0 auto 30px auto;
 
     p {
-        color: #455c82;
-        display: table-cell;
+        color: #444;
         text-align: center;
         vertical-align: middle;
         margin : 0;
@@ -25,7 +24,7 @@
         content: "";
         display: block;
         width: 1.7em;
-        border-bottom: 3px solid #F7BE81;
+        border-bottom: 3px solid #333;
         margin: 1vh;
         margin-left: auto;
         margin-right: auto;
@@ -33,9 +32,10 @@
 }
 
 .skills-content {
-    width: 75%;
+    display: inline-flex;
+    width: 60%;
     height: 100%;
-    display: table;
+    margin : 0 auto;
 
     p {
         display: table-cell;
@@ -44,15 +44,20 @@
         margin : 0;
     }
 
+    .skills-col{
+        display: block;
+    }
     .skills-subject{
-        height: 50%;
+        text-align: center;
+        width: 50%;
     }
     .skills-subtitle{
-        padding-top: 2%;
-        height: 19%;
-    
+        display: inline;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
         p{
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 600;
             margin-top: 1vh;
             margin-bottom: 1vh;
@@ -60,22 +65,21 @@
     }
 
     .skills-col{       
-        display: flex;    
-        
         .skills-container{
             display: flex;    
+            margin: 30px auto;
+            width: fit-content;
         }
         .skills-list{
             position: relative;
-            width: 10vw;
-            height: 20vh;
-            margin-right: 2vw;            
+            width: 150px;
+            height: 150px;
             background-size: cover;
             background-repeat: no-repeat;
             a{
                 color: black;
                 font-weight: 800;
-                font-size: 1.4em;
+                font-size: 1.2em;
             }
             img {
                 border-radius: 20px;
@@ -90,6 +94,9 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
+        }
+        .first{
+            margin-right: 2vw;            
         }        
         .skills-link{
             position: absolute;
@@ -101,10 +108,84 @@
         }
       
     }
+    .left{
+        border-right: solid 1px lightgrey;
+    }
     .skills-list:hover{
         opacity: 0.3;
         .skills-link{
             visibility: visible;
         }  
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .skills-content .skills-subtitle p {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .skills-content .skills-col .skills-list {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        a {
+            font-size: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .skills-content .skills-subtitle p {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .skills-content .skills-col .skills-list {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        a {
+            font-size: 0.8em;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .skills
+    {
+        .skills-title{
+            padding-top: 30px;
+        }
+        .skills-content{
+            display: block;
+
+            .skills-subject{
+                width: 100%;
+                
+                p{
+                    font-size: 1.5em;
+                }
+            }
+
+            .left{
+                border: none;                
+            }
+
+            .skills-list{
+                width: 50%;
+                height: 50%;
+            }
+        }
     }
 }

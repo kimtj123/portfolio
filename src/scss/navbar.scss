@@ -1,54 +1,132 @@
 /****************************** 변수 ********************************/
 $commonHeight : 6vh;
 /*******************************************************************/
-li:hover {
-    opacity: 0.5;
-}
 
 .navbar
 {
-    background: rgba(0,0,0,0.6);
-    width : 100vw;
+    background: rgba(2, 2, 2, 0.3);
+    width : 100%;
     height : $commonHeight;
     display: table-cell;
     vertical-align: middle;
     padding : 0.5vh 0.5vw;
     position: fixed;
     z-index: 1;
-    font-size: x-large;
-    ul{
-        list-style: none;
-    }
-}
-
-.navbar-home{
-    width: auto;
-    display: inline;
-    float : left;
-    margin-left: 3vw;
-    line-height: $commonHeight;
-      ul {
-        display: inline;
-        li {
-            display: inline;            
-            margin-right: 1vw;
-            color: #fff;
-        }
+    font-size: larger;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;    
+    .close{
+        color : white;
+        display: none;
+        margin: 30px 0;
     }
     
-}
-
-.navbar-menu{
-    width: auto;
-    display: inline;
-    float: right;
-    line-height: $commonHeight;
     ul {
+        list-style: none;
         display: inline;
+        line-height: 6vh;
+        
+        .menu-items{
+            float: right;
+        }
+    
         li {
             display: inline;            
             margin-right: 3vw;
             color: #fff;
-        }
+            a{
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) scaleX(0);
+                    transform-origin: 50% 50%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(255,255,255,0.8);
+                    transition: transform 250ms;
+                }
+                
+                &:hover {
+                                        
+                    &::after {
+                        transform: translateX(-50%) scaleX(1);
+                    }                    
+                }
+            }
+        }     
+        
     }
+
+}
+
+.changed {
+    background : black;
+}
+
+
+@media screen and (max-width: 768px) {    
+    .navbar{            
+        background: none;
+        padding: 0;
+        // transition: 5s;
+        -webkit-transition: all 0.25s;
+
+        .close{
+            display: block;
+        }    
+        .navbar-wrapper{
+            display: none;
+            background: rgba(2, 2, 2, 0.3);
+            width : 150px;
+            height : 100%;
+            vertical-align: middle;
+            padding : 0.5vh 0.5vw;
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            font-size: medium;
+            // transition: background .5s ease-in-out,padding .5s ease-in-out;
+            text-align: center;      
+        }
+        .visible{
+            display: block;
+            height: fit-content;
+            border-radius: 0px 0px 0px 15px;
+        }
+        ul{
+            display: table;
+            padding : 0;
+            flex-direction: column-reverse;
+            direction: rtl; // 오늘의 TIL
+            li{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }        
+
+        .bar-open{
+            transition: 0.5s;
+            top: 0;
+            padding-top: 20px;
+            padding-right: 30px;
+            cursor: pointer;
+            margin: 0;
+            float: right;
+            .bar {
+                width: 35px;
+                height: 5px;
+                background-color: #777;
+                margin: 6px 0;
+            }  
+        }
+        .bar-close{
+            cursor: pointer;
+        }               
+    }    
+    .changed{
+        background : none;
+    }
+    
 }

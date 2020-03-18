@@ -1,9 +1,8 @@
 import React from 'react';
 import './scss/project.scss';
 import ProjectList from './sub-component/project-list'
+import Card from './sub-component/card'
 
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faBlogger } from "@fortawesome/free-brands-svg-icons";
 
 import MozzaBoard from './img/mozza-board.gif';
 import MozzaDelete from './img/mozza-deletelist.gif';
@@ -22,44 +21,65 @@ interface detailProps {
   term: string,
   stack: string[],
   comment: string,
-  link: [string, object][];
+  desc: string[],
+  link: string[],
   gif: string[]
 }
 
 function Project() {
   let projectInfo: projectProps = {
     mozzarello: {
-      title: "Mozzarello",
       term: "2019.12 ~ 2019.01 / 5주",
-      stack: ["Javascript", "React", "HTML", "CSS", "MongoDB", "Mongoose(koa)"],
+      title: "Mozzarello",
+      stack: ["Javascript", "React", "MongoDB", "Mongoose(koa)"],
       comment: "Trello 커버 프로젝트",
       link: [
-        ["https://github.com/kimtj123/Mozzarello", faGithub],
-        ["https://www.notion.so/Mozzarello-96f0734b4e2148a290cf787c6649062e", faLink],
-        ["https://blog.naver.com/kimtajung1/221744290215", faBlogger]
+        "https://github.com/kimtj123/Mozzarello",
+        "https://blog.naver.com/kimtajung1/221744290215",
+        "https://www.notion.so/Mozzarello-96f0734b4e2148a290cf787c6649062e"
       ],
-      gif: [MozzaBoard, MozzaDelete]
+      desc: [
+        "개인 프로젝트",
+        "JWT를 활용해 회원 가입 / 정보 수정, 로그인, 로그아웃 구현",
+        "보드/카드/리스트에 대한 CRUD 구현",
+        "mongoose를 통해 서버 스키마 작성"
+      ],
+      gif: [MozzaBoard]
     },
     MTOD: {
-      title: "M-TOD",
       term: "2019.11 ~ 2019.12 / 4주",
+      title: "M-TOD",
       stack: ["Javascript", "React-Native", "Native-Base"],
-      comment: "온라인 콘서트 티켓 발권을 서비스하는 어플(Git 소스코드 공개 불가)",
+      comment: "온라인 콘서트 티켓 발권 서비스",
       link: [
-        ["https://bit.ly/36cHJ9g", faLink],
-        ["https://blog.naver.com/kimtajung1/221734201049", faBlogger]
+        "null",
+        "https://blog.naver.com/kimtajung1/221734201049",
+        "https://bit.ly/36cHJ9g"
+      ],
+      desc: [
+        "팀 프로젝트 / 기업제안 프로젝트",
+        "Horizontal scroll, FlatList를 활용한 메인페이지 구성",
+        "회원정보 표시,수정,탈퇴 기능 구현",
+        "JWT를 사용한 로그인 권한 체크",
+        "마이티켓 / 세부티켓정보 페이지 구현"
       ],
       gif: [MTOD]
     },
     farmers: {
-      title: "Farmers",
       term: "2019.10 ~ 2019.11 / 2주",
-      stack: ["Javascript", "React", "HTML", "CSS"],
-      comment: "위치·날씨 정보를 기반으로 관심작물의 상태와 정보 표시",
+      title: "Farmers",
+      stack: ["Javascript", "React"],
+      comment: "위치·날씨 정보를 기반으로n관심작물의 상태와 정보 표시",
       link: [
-        ["https://github.com/codestates/Farmers-client", faGithub],
-        ["https://www.notion.so/5-Farmers-Botanists-04917b9e582f43b982353d3db0a9498d", faLink],
-        ["https://blog.naver.com/kimtajung1/221694557904", faBlogger]
+        "https://github.com/codestates/Farmers-client",
+        "https://blog.naver.com/kimtajung1/221694557904",
+        "https://www.notion.so/5-Farmers-Botanists-04917b9e582f43b982353d3db0a9498d",
+      ],
+      desc: [
+        "팀 프로젝트",
+        "로그인 / 로그아웃 구현",
+        "로그인 이전 / 이후에 제공되는 메인페이지 구현",
+        "선호작물에 대한 정보/상태 표시 기능",
       ],
       gif: [Farmers]
     }
@@ -73,7 +93,7 @@ function Project() {
       <div className="project-content">
         {
           Object.values(projectInfo).map((project, i) =>
-            <ProjectList project={project} />)
+            <Card info={project} index={i} key={`cardList${i}`} />)
         }
       </div>
     </div>

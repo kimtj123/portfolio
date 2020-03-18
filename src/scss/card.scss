@@ -1,0 +1,201 @@
+$cardBackground0: #F8981D;
+$cardBackground1: #E12E4B;
+$cardBackground2: #5BBDC8;
+$cardWidth : 320px;
+
+.card {
+    display: grid;
+    grid-template-columns: $cardWidth;
+    grid-template-rows: 210px 400px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    border: solid 1px lightgray;
+
+    // box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:50px;
+  }
+
+  .card-image {
+    grid-area: image;
+    // background: url("../img/coding.jpg");    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    // background-size: cover;
+    img{
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom: solid 1px lightgray;
+      width : 100%;
+      height: 100%;
+    }
+  }
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+
+    .date {      
+      font-weight: 500;
+      font-size:13px;
+    }    
+    .font0{
+        color : $cardBackground0;
+    }
+    .font1{
+      color : $cardBackground1;
+    }
+    .font2{
+      color : $cardBackground2;
+    }
+    .stack{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul{
+      // list-style-type: none;
+      color:#444;
+      width: fit-content;
+      font-size: 15px;
+      text-align: start;
+      li {
+        margin: 5px 0px;
+      }
+    }
+    .comment-wraaper{
+      margin : 20px;
+    }
+    .comment {
+      margin : 0;
+    }
+  }
+  .card-text p {
+    color: #444;
+    font-size:15px;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+  }
+  .card-button {    
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: black;
+    display: grid;
+    grid-area: stats; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;   
+    // background: rgb(255, 7, 110);
+    
+    a{
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      transform: translateY(25%);
+      text-decoration-line: none;
+      display: table-cell;
+      .button {        
+        align-items: center;
+        background: none;
+        border: none;
+        color: white;
+        display: flex;  
+        outline:none;       
+        font-size: 15px;
+        font-weight: 500;
+        justify-content: center;
+        flex-direction: column;
+        padding:10px;
+        margin: 0 auto;
+      }            
+    }
+    a:hover{
+      opacity: 0.5;
+    }
+  }
+  
+  .button-middle{    
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    display: table;
+    width : 100%;
+    height: 100%;
+  }  
+
+  .card0 {
+    background : $cardBackground0;
+  }
+  .card1 {
+    background : $cardBackground1;
+  }
+  .card2 {
+    background : $cardBackground2;
+  }
+  .card:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+
+
+
+@media screen and (max-width: 1300px){
+  .card{
+    grid-template-columns: $cardWidth - 30px;
+    grid-template-rows: 210px 400px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    border: solid 1px lightgray;
+
+    // box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .card{
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 420px 70px;
+    max-width: 400px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    border: solid 1px lightgray;
+
+    // box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:3px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card{
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 380px 70px;
+    border: none;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10%;
+
+    .card-text{
+      h2{
+        margin:0 5px;
+      }
+      
+      .comment-wraaper{
+        margin: 10px;        
+      }
+    }
+  }
+}

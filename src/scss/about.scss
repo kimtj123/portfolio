@@ -1,17 +1,14 @@
 .about{
-    display: flex;
-    width: 100%;
-    height: 30vh;    
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .about-title{
-    display: table;
-    width: 25%;
-    height: 100%;
+    text-align: center;
 
     p {
-        color: #455c82;
-        display: table-cell;
+        color: #444;
+        // display: table-cell;
         text-align: center;
         vertical-align: middle;
         margin : 0;
@@ -22,7 +19,7 @@
         content: "";
         display: block;
         width: 2.6em;
-        border-bottom: 3px solid #bcbcbc;
+        border-bottom: 3px solid #333;
         margin: 1vh;
         margin-left: auto;
         margin-right: auto;
@@ -30,17 +27,179 @@
 
 }
 .about-content{
-    width: 75%;
-    height: 100%;
+    width: 70%;
+    margin : 0 auto;
+    display: flex;
 
+    .about-left{
+        width: 40%;
+        
+        .about-profile{
+            margin-top: 30px;
+            img {
+                width: 30%;
+                min-width: 130px;
+                float: left;                
+            }
+
+            .about-desc{         
+
+                list-style-type: none;
+                font-size: 1.2em;
+                width : 50%;
+                float : left;
+                .name{
+                    font-size: 1.5em;
+                    font-weight: bold;                  
+                }                
+                li{
+                    margin-bottom: 0.2em;
+                }
+            }
+        }
+        .about-experience{
+            margin-top: 30px;
+            float: left;
+            width: 100%;
+            
+            h2{
+                width: 100%;
+                margin-bottom: 0;
+            }
+            ul{
+                display: inline-flex;
+                list-style-type: none;
+                padding: 0;
+                
+                li{
+                    text-align: center;
+                    float : left;
+                    padding: 30px 60px 0 0;
+
+                    .title{
+                        font-size:1.2em;
+                        font-weight: bold;
+                    }
+                    .company{
+                        color : #444;
+                        font-weight: 500;
+                    }
+                    .date{
+                        color : #666;
+                    }
+                }
+            }
+            p{
+                float: none;
+            }
+        }
+     
+    }
+    .about-right{
+        width: 60%
+    }
     .about-article{
-        margin-top: 5vh;
-        margin-right: 25vw;
+        // display: grid;
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    h2 {        
+        float: left;
+        margin-bottom: 1.5em;
     }
     p {
-        // text-align: center;
+        float: left;
         font-size: 1.2em;
-        vertical-align: middle;
-        margin : 1em;
+        margin: 0;
+    }
+    .about-features{        
+        float: left;
+        font-size: 1.2em;
+        margin: 0;
+        padding-left: 20px;
+    }
+}
+@media ( max-width: 1200px ){
+    .about-content .about-left 
+    {
+        .about-profile 
+        {
+            img{
+                width: 60%;
+            }
+            .about-desc
+            {
+                padding: 0;
+                .name 
+                {
+                    font-size: 1.2em;            
+                }
+                li 
+                {
+                    font-size: 0.9em;
+                }
+            }
+        }
+
+        .about-experience
+        {
+            margin-top: 0;
+
+            ul{
+                display: block;
+                li{
+                    padding: 10px 20px 0 0;
+                }
+            }
+        }
+    }
+}
+@media ( max-width: 768px ){
+    .about-content{
+        display : grid;
+
+        .about-left{
+            width : 100%;
+            .about-profile{
+                img{
+                    width: 40%;
+                    margin: auto 30%;
+                }
+                ul {
+                    text-align: center;
+                    width: 100%;
+                    padding: 0;                    
+                }
+                .about-desc{
+                    width: 100%;
+                }
+            }
+            .about-experience{           
+                text-align: center;     
+                margin-bottom: 30px;
+
+                h2{
+                    margin-bottom: 30px;
+                }
+
+                ul{
+                    display: block  ;
+                    .experience-list{
+                        display: block;
+                        width: 80%;
+                        float : none;
+                        padding : 20px 10%;
+                    }
+                }
+            }
+        }
+
+        .about-right{
+            width: 100%;
+            .about-article{
+                width: 100%;
+            }
+        }
     }
 }
