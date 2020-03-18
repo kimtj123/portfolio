@@ -26,7 +26,9 @@ function Card(props: any, index: number) {
 
   return (
     <div className="card">
-      <div className="card-image"></div>
+      <div className="card-image">
+        <img src={props.info.gif} />
+      </div>
       <div className="card-text">
         <span className={`date font${props.index}`} >{props.info.term}</span>
         <h2>{props.info.title}</h2>

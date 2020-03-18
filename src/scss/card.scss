@@ -22,10 +22,17 @@ $cardWidth : 320px;
 
   .card-image {
     grid-area: image;
-    background: url("../img/coding.jpg");
+    // background: url("../img/coding.jpg");    
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-size: cover;
+    // background-size: cover;
+    img{
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom: solid 1px lightgray;
+      width : 100%;
+      height: 100%;
+    }
   }
   .card-text {
     grid-area: text;

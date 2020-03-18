@@ -44,7 +44,7 @@ function Project() {
         "보드/카드/리스트에 대한 CRUD 구현",
         "mongoose를 통해 서버 스키마 작성"
       ],
-      gif: [MozzaBoard, MozzaDelete]
+      gif: [MozzaBoard]
     },
     MTOD: {
       term: "2019.11 ~ 2019.12 / 4주",
