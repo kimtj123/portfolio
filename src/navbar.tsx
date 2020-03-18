@@ -32,11 +32,9 @@ function navBarList(listArray: string[]) {
   return arr;
 }
 
-
 function Navbar() {
-
   let [position, checkPosition] = useState(0);
-  let [navbar, navbarShow] = useState({ style: "none" })
+  let [navbar, navbarShow] = useState(false)
   // HOME 을 제외하고 float : right 시 먼저 위치한 value가 최 우측으로 가는 현상 발생
   // 이에 역순으로 넣어서 제작
   let list: string[] = ["HOME", "CONTACT", "PROJECT", "SKILLS", "ABOUT"];
@@ -46,25 +44,41 @@ function Navbar() {
     return window.scrollY;
   }
 
+  function handleOutsideClick(e: any) {
+    // ignore clicks on the component itself
+    let targetName = e.target.parentNode.className;
+    if (targetName === "menu-items" || targetName === "menu-home" || targetName === "App") {
+      return;
+    }
+    navbarShow(!navbar);
+  }
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
   });
 
   return (
-    <div className={position === 0 ? "navbar" : "navbar changed"}>
-      <nav>
-        {/* navbar-content를 크기에 따라 옵션을 주면 된다. */}
+    <nav
+      className={position === 0 ? "navbar" : "navbar changed"}
+    // onClick={handleOutsideClick}
+    >
+      <div className={!navbar ? "navbar-wrapper" : "navbar-wrapper visible"}>
+        <div className="close" onClick={handleOutsideClick}>CLOSE(X)</div>
         <div className="navbar-contents">
           <ul>
             {navBarList(list)}
           </ul>
         </div>
-      </nav>
-      <button className="sidebar-menu" onClick={() => { console.log(1) }}>
-        <img src={menu} />
-      </button>
-    </div>
+      </div>
+      <div
+        className={!navbar ? "bar-open" : "bar-close"}
+        onClick={handleOutsideClick}
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+    </nav>
   );
 }
 

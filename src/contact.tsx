@@ -12,7 +12,7 @@ function Contact() {
   let contactInfo: passingObj =
   {
     mail: "Email : kimtajung1@gmail.com",
-    phone: "Phone : 010-8764-6754"
+    phone: "Phone : 010-8764-6754",
   }
 
   return (

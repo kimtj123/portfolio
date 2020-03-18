@@ -133,6 +133,10 @@
         height: 120px;
         background-size: cover;
         background-repeat: no-repeat;
+
+        a {
+            font-size: 1em;
+        }
     }
 }
 
@@ -150,6 +154,9 @@
         height: 100px;
         background-size: cover;
         background-repeat: no-repeat;
+        a {
+            font-size: 0.8em;
+        }
     }
 }
 
@@ -167,7 +174,7 @@
                 width: 100%;
                 
                 p{
-                    font-size: 1.7em;
+                    font-size: 1.5em;
                 }
             }
 

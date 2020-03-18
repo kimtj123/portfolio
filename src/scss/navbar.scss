@@ -13,12 +13,15 @@ $commonHeight : 6vh;
     position: fixed;
     z-index: 1;
     font-size: larger;
-    transition: background .5s ease-in-out,padding .5s ease-in-out;
-    ul{
-        list-style: none;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;    
+    .close{
+        color : white;
+        display: none;
+        margin: 30px 0;
     }
-
+    
     ul {
+        list-style: none;
         display: inline;
         line-height: 6vh;
         
@@ -46,11 +49,10 @@ $commonHeight : 6vh;
                 }
                 
                 &:hover {
-                    
+                                        
                     &::after {
                         transform: translateX(-50%) scaleX(1);
-                    }
-                    
+                    }                    
                 }
             }
         }     
@@ -63,29 +65,68 @@ $commonHeight : 6vh;
     background : black;
 }
 
-.sidebar-menu{
-    visibility: hidden;
-}
 
-@media screen and (max-width: 768px) {
-    .navbar{
+@media screen and (max-width: 768px) {    
+    .navbar{            
         background: none;
-        padding : 0.5vh 0vw;
-        // display: none;
+        padding: 0;
+        // transition: 5s;
+        -webkit-transition: all 0.25s;
 
-        .navbar-contents{
+        .close{
+            display: block;
+        }    
+        .navbar-wrapper{
             display: none;
+            background: rgba(2, 2, 2, 0.3);
+            width : 150px;
+            height : 100%;
+            vertical-align: middle;
+            padding : 0.5vh 0.5vw;
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            font-size: medium;
+            // transition: background .5s ease-in-out,padding .5s ease-in-out;
+            text-align: center;      
         }
+        .visible{
+            display: block;
+            height: fit-content;
+            border-radius: 0px 0px 0px 15px;
+        }
+        ul{
+            display: table;
+            padding : 0;
+            flex-direction: column-reverse;
+            direction: rtl; // 오늘의 TIL
+            li{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }        
+
+        .bar-open{
+            transition: 0.5s;
+            top: 0;
+            padding-top: 20px;
+            padding-right: 30px;
+            cursor: pointer;
+            margin: 0;
+            float: right;
+            .bar {
+                width: 35px;
+                height: 5px;
+                background-color: #777;
+                margin: 6px 0;
+            }  
+        }
+        .bar-close{
+            cursor: pointer;
+        }               
     }    
     .changed{
         background : none;
     }
-    .sidebar-menu{
-        visibility: visible;
-        background: none;
-        border : 0;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        right: 1.5vw; /* Position the navbar at the top of the page */
-    }
+    
 }

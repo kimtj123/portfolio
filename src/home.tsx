@@ -9,9 +9,19 @@ function Home() {
         <div className="greeting">
           <p>Developer 김태중 의 포트폴리오 입니다.</p>
         </div>
-        <div className="home-link">
-          {/* <a className="home-button">blog</a>
-          <a className="home-button">github</a> */}
+        <div className="arrowAnim">
+          <div className="arrowSliding">
+            <div className="arrow"></div>
+          </div>
+          <div className="arrowSliding delay1">
+            <div className="arrow"></div>
+          </div>
+          <div className="arrowSliding delay2">
+            <div className="arrow"></div>
+          </div>
+          <div className="arrowSliding delay3">
+            <div className="arrow"></div>
+          </div>
         </div>
       </div>
     </div>
