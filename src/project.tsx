@@ -1,6 +1,5 @@
 import React from 'react';
 import './scss/project.scss';
-import ProjectList from './sub-component/project-list'
 import Card from './sub-component/card'
 
 
@@ -73,7 +72,7 @@ function Project() {
       link: [
         "https://github.com/codestates/Farmers-client",
         "https://blog.naver.com/kimtajung1/221694557904",
-        "https://www.notion.so/5-Farmers-Botanists-04917b9e582f43b982353d3db0a9498d",
+        "https://www.notion.so/Farmers-bc176474cfee47439e8ec99b3a6b904b",
       ],
       desc: [
         "팀 프로젝트",

@@ -9,11 +9,12 @@ interface SubjectProps {
 }
 
 let skill = (img: string, i: number, link: string) => {
+  console.log(link);
   return (
     <div className={i % 2 === 0 ?
       "skills-list first" :
       "skills-list"} key={`skills-list${i}`}>
-      <a href={link[i]}
+      <a href={link}
         target="_blank"
         rel="noopener noreferrer"
       >
