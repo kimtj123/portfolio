@@ -4,7 +4,6 @@ import Card from './sub-component/card'
 
 
 import MozzaBoard from './img/mozza-board.gif';
-import MozzaDelete from './img/mozza-deletelist.gif';
 
 import MTOD from './img/MTOD.gif';
 import Farmers from './img/Farmers.gif';

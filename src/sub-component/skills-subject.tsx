@@ -9,7 +9,6 @@ interface SubjectProps {
 }
 
 let skill = (img: string, i: number, link: string) => {
-  console.log(link);
   return (
     <div className={i % 2 === 0 ?
       "skills-list first" :

@@ -65,7 +65,15 @@ $commonHeight : 6vh;
     background : black;
 }
 
+@media screen and (max-width: 1200px) {
+    .navbar{
+        background: none;
+    }
 
+    .changed {
+        background: black;
+    }
+}
 @media screen and (max-width: 768px) {    
     .navbar{            
         background: none;

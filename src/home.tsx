@@ -1,6 +1,5 @@
 import React from 'react';
 import './scss/home.scss';
-import getWidth from "./sub-component/getWidth"
 
 function Home() {
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './scss/navbar.scss';
 import menu from "./img/menu.png"
-import getWidth from "./sub-component/getWidth"
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 
