@@ -69,7 +69,7 @@ function Project() {
       stack: ["Javascript", "React"],
       comment: "위치·날씨 정보를 기반으로n관심작물의 상태와 정보 표시",
       link: [
-        "https://github.com/codestates/Farmers-client",
+        "https://github.com/kimtj123/Farmers-Client-",
         "https://blog.naver.com/kimtajung1/221694557904",
         "https://www.notion.so/Farmers-bc176474cfee47439e8ec99b3a6b904b",
       ],
