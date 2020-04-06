@@ -28,7 +28,7 @@ function Project() {
   let projectInfo: projectProps = {
     mozzarello: {
       term: "2019.12 ~ 2019.01 / 5주",
-      title: "Mozzarello",
+      title: "Mozzarello(Full)",
       stack: ["Javascript", "React", "MongoDB", "Mongoose(koa)"],
       comment: "Trello 커버 프로젝트",
       link: [
@@ -46,7 +46,7 @@ function Project() {
     },
     MTOD: {
       term: "2019.11 ~ 2019.12 / 4주",
-      title: "M-TOD",
+      title: "M-TOD(Front)",
       stack: ["Javascript", "React-Native", "Native-Base"],
       comment: "온라인 콘서트 티켓 발권 서비스",
       link: [
@@ -65,7 +65,7 @@ function Project() {
     },
     farmers: {
       term: "2019.10 ~ 2019.11 / 2주",
-      title: "Farmers",
+      title: "Farmers(Front)",
       stack: ["Javascript", "React"],
       comment: "위치·날씨 정보를 기반으로n관심작물의 상태와 정보 표시",
       link: [
